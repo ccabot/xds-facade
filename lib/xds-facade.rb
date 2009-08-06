@@ -3,7 +3,7 @@ if RUBY_PLATFORM =~ /java/
   require 'builder'
   require 'uuid'
   require 'java'
-  require 'andand'
+  require 'activesupport'
   require 'rexml/document'
   
   require File.expand_path(File.dirname(__FILE__) + '/commons-codec-1.3.jar')
@@ -61,8 +61,8 @@ module XDS
      proxy_config = {}
      host = ENV['xds_proxy'] || ENV['http_proxy']
      if host
-         host.andand.gsub!("http://","")
-         host.andand.gsub!("https://","")
+         host.try(:gsub!, "http://", "")
+         host.try(:gsub!, "https://", "")
      end
      if host 
         host = host.split(":")

@@ -45,18 +45,18 @@ module XDS
           create_slot(builder,'serviceStopTime', @service_stop_time)  if @service_stop_time
 
           create_slot(builder,'sourcePatientId', @source_patient_id) if @source_patient_id
-          @source_patient_info.andand.to_soap(builder)
+          @source_patient_info.try(:to_soap, builder)
           
           @version_info.to_soap(builder) if @version_info
-          @author.andand.to_soap(builder,@id)       
-          @class_code.andand.to_soap(builder,@id) 
-          @confidentiality_code.andand.to_soap(builder,@id)     
-          @format_code.andand.to_soap(builder,@id) 
-          @healthcare_facility_type_code.andand.to_soap(builder, @id)         
+          @author.try(:to_soap, builder, @id)       
+          @class_code.try(:to_soap, builder, @id) 
+          @confidentiality_code.try(:to_soap, builder, @id)     
+          @format_code.try(:to_soap, builder, @id) 
+          @healthcare_facility_type_code.try(:to_soap, builder, @id)         
           
-          @practice_setting_code.andand.to_soap(builder,@id)
+          @practice_setting_code.try(:to_soap, builder, @id)
           
-          @type_code.andand.to_soap(builder,@id)
+          @type_code.try(:to_soap, builder, @id)
 
           external_identifier(builder,:patient_id)
           external_identifier(builder,:unique_id)
