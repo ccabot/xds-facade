@@ -1,0 +1,11 @@
+= xds-facade
+
+Building the gem requires Jeweler. You do not need JRuby to build the gem:
+
+ $ sudo gem install technicalpickles-jeweler -s http://gems.github.com
+ $ rake build
+
+Running the tests does require JRuby:
+
+ $ jruby -S rake test
+
