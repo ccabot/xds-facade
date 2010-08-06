@@ -1,5 +1,5 @@
 module XDS
-  import "org.apache.commons.httpclient.util.EncodingUtil"
+  java_import "org.apache.commons.httpclient.util.EncodingUtil"
   CRLF_BYTES = org.apache.commons.httpclient.util.EncodingUtil.getAsciiBytes("\r\n");
 
   class XdsPart < org.apache.commons.httpclient.methods.multipart.StringPart

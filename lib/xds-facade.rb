@@ -15,16 +15,16 @@ if RUBY_PLATFORM =~ /java/
   require File.expand_path(File.dirname(__FILE__) + '/commons-httpclient-3.1.jar')
   require File.expand_path(File.dirname(__FILE__) + '/apache-mime4j-0.5.jar')
   
-  import "org.apache.commons.httpclient.HttpClient"
-  import "org.apache.commons.httpclient.methods.PostMethod"
-  import "org.apache.commons.httpclient.methods.StringRequestEntity"
-  import "org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity"
-  import "org.apache.commons.httpclient.methods.multipart.Part"
-  import "org.apache.commons.httpclient.methods.multipart.StringPart"
-  import "org.apache.commons.httpclient.methods.multipart.FilePart"
-  import "org.apache.james.mime4j.parser.MimeTokenStream"
-  import "org.apache.james.mime4j.parser.MimeEntityConfig"
-  import "org.apache.commons.httpclient.util.EncodingUtil"
+  java_import "org.apache.commons.httpclient.HttpClient"
+  java_import "org.apache.commons.httpclient.methods.PostMethod"
+  java_import "org.apache.commons.httpclient.methods.StringRequestEntity"
+  java_import "org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity"
+  java_import "org.apache.commons.httpclient.methods.multipart.Part"
+  java_import "org.apache.commons.httpclient.methods.multipart.StringPart"
+  java_import "org.apache.commons.httpclient.methods.multipart.FilePart"
+  java_import "org.apache.james.mime4j.parser.MimeTokenStream"
+  java_import "org.apache.james.mime4j.parser.MimeEntityConfig"
+  java_import "org.apache.commons.httpclient.util.EncodingUtil"
   
   require File.expand_path(File.dirname(__FILE__) + '/mime/mime_message_parser')
 

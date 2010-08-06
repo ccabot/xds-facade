@@ -1,6 +1,6 @@
 module XDS
   class XdsRequestEntity < org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity
-    import "org.apache.commons.httpclient.util.EncodingUtil"
+    java_import "org.apache.commons.httpclient.util.EncodingUtil"
      MULTIPART_FORM_CONTENT_TYPE = "multipart/related"
      attr_accessor :start
      attr_accessor :start_info
