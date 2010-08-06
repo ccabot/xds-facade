@@ -3,7 +3,11 @@ if RUBY_PLATFORM =~ /java/
   require 'builder'
   require 'uuid'
   require 'java'
-  require 'activesupport'
+  begin
+    require 'active_support'
+  rescue LoadError
+    require 'activesupport' # legacy environment
+  end
   require 'rexml/document'
   
   require File.expand_path(File.dirname(__FILE__) + '/commons-codec-1.3.jar')
